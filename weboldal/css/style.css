@@ -1,0 +1,19 @@
+.navszoveg{
+    text-align: center;
+    padding: 2rem;
+    text-shadow: 1px 1px 1px grey;
+    background-color: lightblue;
+}
+h1{
+    text-align: center;
+    padding: 50px;
+}
+.card-title{
+    text-align: center;
+}
+.card-img-top{
+    width: 100%;
+}
+.invisible-block{
+    height: 70px;
+}
