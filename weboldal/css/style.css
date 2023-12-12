@@ -17,3 +17,8 @@ h1{
 .invisible-block{
     height: 70px;
 }
+h2{
+    text-align: center;
+    padding: 30px;
+    font-size: 2.8rem;
+}
