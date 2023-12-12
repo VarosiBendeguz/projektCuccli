@@ -1,24 +1,20 @@
-.navszoveg{
+header{
+    background-color: #a1d0df;
+    height: 168px;
+    width: 1920px;
+    display: inline;
+    font-size: 15px;
     text-align: center;
-    padding: 2rem;
-    text-shadow: 1px 1px 1px grey;
-    background-color: lightblue;
+    color: black;
+}
+main{
+    background-color: #2844a8;
+}
+footer{
+    background-color: #a1d0df;
 }
 h1{
     text-align: center;
-    padding: 50px;
-}
-.card-title{
-    text-align: center;
-}
-.card-img-top{
-    width: 100%;
-}
-.invisible-block{
-    height: 70px;
-}
-h2{
-    text-align: center;
-    padding: 30px;
-    font-size: 2.8rem;
+    font-size: 30px;
+    color: white;
 }
