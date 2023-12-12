@@ -5,7 +5,7 @@ const gyikKartya = document.getElementById("gyik")
 const spockKartya = document.getElementById("spock")
 const ai = document.getElementById("ai")
 
-const kepek = ["kep1", "kep2", "kep3", "kep4", "kep5"]
+const kepek = ["rock.xcf", "paerp.xcf", "scissores.xcf", "gyikocskaaa.xcf", "spocki.xcf"]
 
 
 let kivalasztott = null;
@@ -14,12 +14,18 @@ let nyert = false;
 function JatekMenet(req){
     kivalasztott = req;
     index = 0;
-    setInterval(function(index){
+    const interval = setInterval(function(index){
         index++;
         if(index >= kepek.length){
             index = 0;
         }
-        ai.src = kepek[index];  
+        ai.src = "kepek/" + kepek[index];  
+
+        let num = Math.random(0, 15);
+        if(num == 15){
+            clearInterval(interval)
+        }
+
     }, 5)
 
     let aivalaszt = null;
