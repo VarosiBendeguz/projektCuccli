@@ -5,31 +5,15 @@ const gyikKartya = document.getElementById("gyik")
 const spockKartya = document.getElementById("spock")
 const ai = document.getElementById("ai")
 
-const kepek = ["rock.xcf", "paerp.xcf", "scissores.xcf", "gyikocskaaa.xcf", "spocki.xcf"]
+const kepek = ["rock-removebg-preview.png", "paerp-removebg-preview.png", "scissores-removebg-preview.png", "gyikocskaaa-removebg-preview.png", "spocki-removebg-preview.png"]
 
 
 let kivalasztott = null;
 let nyert = false;
 
-function JatekMenet(req){
-    kivalasztott = req;
-    index = 0;
-    const interval = setInterval(function(index){
-        index++;
-        if(index >= kepek.length){
-            index = 0;
-        }
-        ai.src = "kepek/" + kepek[index];  
-
-        let num = Math.random(0, 15);
-        if(num == 15){
-            clearInterval(interval)
-        }
-
-    }, 5)
-
+function eval(){
     let aivalaszt = null;
-    switch(index){
+    switch(index2){
         case 0:
             aivalaszt = "ko";
             break;
@@ -47,7 +31,7 @@ function JatekMenet(req){
             break;
     }
 
-    let valaszt = valasztott.id;
+    let valaszt = kivalasztott.id;
 
     switch(aivalaszt){
         case "ko":
@@ -76,9 +60,51 @@ function JatekMenet(req){
             }
             break;
     }
+    alert(nyert)
+}
 
-    //TODO: felugró modal, ha nyert
+function JatekMenet(req){
+    kivalasztott = req;
+    index2 = 0;
+    let interval = setInterval(function()
+    {
+        index2++
+        if(index2 >= kepek.length){
+            index2 = 0;
+        }
+        if(index2 != 5 && ai.src != "../kepek/" + kepek[index2]){
+            ai.src = "../kepek/" + kepek[index2]; 
+        }
+
+        let num = (Math.floor(Math.random()*6));
+        console.log(num)
+        if(num == 5){
+            clearInterval(interval)
+            eval()
+        }
+
+    }, 700)
+
+    
+
+    //TODO: Továbblép képpel amikor vége
 
 
 
 }
+
+koKartya.addEventListener('click', function(){
+    JatekMenet("ko")
+} )
+papirKartya.addEventListener('click', function(){
+    JatekMenet("papir")
+})
+olloKartya.addEventListener('click', function(){
+    JatekMenet("ollo")
+})
+gyikKartya.addEventListener('click', function(){
+    JatekMenet("gyik")
+} )
+spockKartya.addEventListener('click', function(){
+    JatekMenet("spock")
+} )
