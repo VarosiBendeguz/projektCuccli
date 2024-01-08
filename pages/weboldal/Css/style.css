@@ -1,7 +1,5 @@
 header{
     background-color: #a1d0df;
-    height: 168px;
-    width: 1920px;
     display: inline;
     font-size: 15px;
     text-align: center;
@@ -12,9 +10,19 @@ main{
 }
 footer{
     background-color: #a1d0df;
+    padding: 0px;
 }
 h1{
     text-align: center;
     font-size: 30px;
     color: white;
+}
+h2{
+    text-align: center;
+    font-size: 30px;
+    color: white;
+}
+.card{
+    background-color: #a1d0df;
+    text-align: center;
 }
