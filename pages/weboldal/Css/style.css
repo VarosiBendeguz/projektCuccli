@@ -7,10 +7,12 @@ header{
 }
 main{
     background-color: #2844a8;
+    height: 600px;
 }
 footer{
     background-color: #a1d0df;
-    padding: 0px;
+    height: 100px;
+    padding: 50px;
 }
 h1{
     text-align: center;
@@ -25,4 +27,14 @@ h2{
 .card{
     background-color: #a1d0df;
     text-align: center;
+    max-width: 200px;
+}
+
+#endTxt{
+    color: black;
+    font-size: large;
+}
+
+#tortenetModal2{
+    min-width: 660px;
 }
