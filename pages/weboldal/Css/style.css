@@ -38,3 +38,6 @@ h2{
 #tortenetModal2{
     min-width: 660px;
 }
+iframe{
+    border: 0px;
+}
